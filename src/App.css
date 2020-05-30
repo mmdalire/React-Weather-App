@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Weather*/
+.Weather {
+  margin: 130px auto;
+  width: 50%;
+  background-color: rgb(230, 230, 230);
+  padding: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  color: rgb(43, 56, 86);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MainWeatherInfo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  background-color: rgb(43, 56, 86);
+  margin: -10px;
+  padding: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.DetailedWeatherInfo {
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: solid gray 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HourlyForecast {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: solid gray 2px;
+}
+
+.ForecastItem {
+  text-align: center;
+  border-right: solid gray 1px;
+}
+
+.ForecastItem:last-child {
+  border-right: none;
+}
+
+.PoweredAPI {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.PoweredAPI h4 {
+  color: rgb(43, 56, 86);
+}
+
+#weather-logo {
+  width: 100px;
+  height: 100%;
+  margin: 0 20px;
+}
+
+#forecast-logo {
+  width: 60px;
+  margin-bottom: -10px;
+}
+
+.weather-temperature-container {
+  display: flex;
+  cursor: pointer;
+}
+
+#weather-main-temperature {
+  font-size: 80px;
+  line-height: 1;
+}
+
+#weather-main-unit {
+  font-size: 40px;
+}
+
+.weather-place-and-status {
+  margin-right: 200px;
+  margin-top: 10px;
+}
+
+#detailed-icon {
+  width: 30px;
+}
+
+/*Footer section*/
+footer {
+  height: 20vh;
+  display: flex;
+  background-color: rgb(43, 56, 86);
+  padding: 0 10px;
+  color: white;
+}
+
+.footer-content {
+  padding: 15px 0;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
