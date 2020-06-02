@@ -1,7 +1,8 @@
 import React from "react";
 import Weather from "./components/Weather";
 import Footer from "./components/Footer";
-import "./App.css";
+import "./css/App.css";
+import "./css/owfont-regular.css";
 
 function App() {
   return (

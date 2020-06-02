@@ -1,0 +1,28 @@
+{
+  "list": [
+    {
+      "dt": null,
+      "main": {
+        "temp": null,
+        "temp_min": null,
+        "temp_max": null,
+        "pressure": null,
+        "humidity": null
+      },
+      "weather": [
+        {
+          "id": null,
+          "main": null,
+          "description": "-",
+          "icon": null
+        }
+      ],
+      "clouds": { "all": null },
+      "wind": { "speed": null }
+    }
+  ],
+  "city": {
+    "name": null,
+    "country": null
+  }
+}
