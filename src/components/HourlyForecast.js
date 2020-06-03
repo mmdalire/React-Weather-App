@@ -21,11 +21,17 @@ class HourlyForecast extends Component {
     )}`;
   }
 
+  dayOrNight(unix) {
+    const time = parseInt(this.convertToTime(unix).split(":")[0]);
+    return time >= 4 && time < 19 ? "d" : "n";
+  }
+
   render() {
     const forecastItem = this.props.hourlyForecast.map((forecast) => (
       <ForecastItem
         key={forecast.dt}
         weatherIcon={forecast.weather[0].id}
+        dayOrNight={`${this.dayOrNight(forecast.dt)}`}
         date={`${this.convertToDate(forecast.dt)}`}
         time={`${this.convertToTime(forecast.dt)}`}
         weather={forecast.weather[0].main}

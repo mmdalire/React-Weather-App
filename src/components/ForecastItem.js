@@ -2,7 +2,15 @@ import React, { Component } from "react";
 
 class ForecastItem extends Component {
   render() {
-    const { weatherIcon, date, time, weather, minTemp, maxTemp } = this.props;
+    const {
+      weatherIcon,
+      dayOrNight,
+      date,
+      time,
+      weather,
+      minTemp,
+      maxTemp,
+    } = this.props;
 
     return (
       <div className="ForecastItem">
@@ -10,13 +18,14 @@ class ForecastItem extends Component {
           {date} <br />
           {time}
         </h3>
-        <i className={`owf owf-${weatherIcon} owf-5x`} id="forecast-logo"></i>
+        <i
+          className={`owf owf-${weatherIcon}-${dayOrNight} owf-5x`}
+          id="forecast-logo"
+        ></i>
         <h4>{weather}</h4>
         <span>{minTemp}°/ </span>
         <span>{maxTemp}°</span>
       </div>
-
-      //<h4>Nice</h4>
     );
   }
 }
